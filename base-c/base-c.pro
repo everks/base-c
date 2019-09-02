@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
     helpmanager.cpp \
     globalres.cpp \
-    filemanager.cpp
+    filemanager.cpp \
+    runmanager.cpp
 
 HEADERS += \
         mainwindow.h \
     helpmanager.h \
     globalres.h \
-    filemanager.h
+    filemanager.h \
+    runmanager.h
 
 
 

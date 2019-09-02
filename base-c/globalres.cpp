@@ -20,10 +20,21 @@ void GlobalRes::setPFileManager(FileManager *value)
     pFileManager = value;
 }
 
+RunManager *GlobalRes::getPRunManager()
+{
+    return pRunManager;
+}
+
+void GlobalRes::setPRunManager(RunManager *value)
+{
+    pRunManager = value;
+}
+
 GlobalRes::GlobalRes()
 {
-
+    
 }
 
 MainWindow* GlobalRes::pMainWindow=nullptr;
 FileManager* GlobalRes::pFileManager=nullptr;
+RunManager* GlobalRes::pRunManager=nullptr;

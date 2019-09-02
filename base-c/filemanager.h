@@ -20,6 +20,8 @@ public:
     bool save();
     bool saveAs();
     char* openMotto(char *buf,size_t size);
+    QString getFileName() const;
+    void setFileName(const QString &value);
 };
 
 

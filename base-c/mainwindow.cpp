@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     GlobalRes::setPMainWindow(this);
     GlobalRes::setPFileManager(new FileManager());
+    GlobalRes::setPRunManager(new RunManager());
 
     createActions();
     createDockWindows();
@@ -85,17 +86,18 @@ void MainWindow::on_actionUnannotation_triggered()
 
 void MainWindow::on_actionRun_triggered()
 {
+    GlobalRes::getPRunManager()->runAction();
 
 }
 
 void MainWindow::on_actionCompile_triggered()
 {
-
+    GlobalRes::getPRunManager()->compile();
 }
 
 void MainWindow::on_actionRun_Compile_triggered()
 {
-
+    GlobalRes::getPRunManager()->compileAndRun();
 }
 
 void MainWindow::on_actionStop_triggered()

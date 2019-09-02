@@ -7,6 +7,16 @@
 #include <globalres.h>
 
 
+QString FileManager::getFileName() const
+{
+    return fileName;
+}
+
+void FileManager::setFileName(const QString &value)
+{
+    fileName = value;
+}
+
 FileManager::FileManager(){
     mainWindow=GlobalRes::getPMainWindow();
     text=nullptr;
