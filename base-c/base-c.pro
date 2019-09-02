@@ -26,15 +26,26 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    helpmanager.cpp \
+    globalres.cpp \
+    filemanager.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    helpmanager.h \
+    globalres.h \
+    filemanager.h
 
-FORMS += \
-        mainwindow.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    motto.qrc
+
+FORMS += \
+    mainwindow.ui

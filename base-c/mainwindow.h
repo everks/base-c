@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QListWidget>
 #include <QMainWindow>
 
 namespace Ui {
@@ -52,8 +53,18 @@ private slots:
 
     void on_actionAbout_us_triggered();
 
+
 private:
+    void createDockWindows();
+    void createActions();
+    void createStatusBar();
+
     Ui::MainWindow *ui;
+
+    QListWidget *consoleList;
+
+    QMenu *windowsMenu;
+
 };
 
 #endif // MAINWINDOW_H

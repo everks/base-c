@@ -1,0 +1,5 @@
+<RCC>
+    <qresource lang="plain" prefix="/">
+        <file>motto.txt</file>
+    </qresource>
+</RCC>
