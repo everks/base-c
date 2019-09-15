@@ -28,8 +28,6 @@ FileManager::~FileManager()
 
 }
 bool FileManager::open(){
-    //建立TextEdit窗口
-    mainWindow->createTextEdit();
     //打开文件
     fileName = QFileDialog::getOpenFileName(mainWindow,"open");
     if(fileName.isEmpty())
@@ -37,6 +35,8 @@ bool FileManager::open(){
     FILE *p=fopen(fileName.toStdString().data(),"r");
     if(p==nullptr)
         return false;
+    //建立TextEdit窗口
+    mainWindow->createTextEdit();
     QString str;
     while (!feof(p)) {
         char buf[1024]={0};
